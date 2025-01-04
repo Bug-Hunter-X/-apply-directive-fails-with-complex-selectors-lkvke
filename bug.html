@@ -1,0 +1,9 @@
+This bug occurs when using Tailwind CSS's `@apply` directive with a class that has a complex selector, such as a pseudo-class or sibling selector.  The `@apply` directive might not apply the styles correctly in this scenario. For example:
+
+```html
+<div class="bg-gray-100">
+  <button class="@apply hover:bg-gray-200">Hover Me</button>
+</div>
+```
+
+In this case, the `hover:bg-gray-200` class might not apply correctly to the button when hovering, depending on the context and other selectors involved. 
